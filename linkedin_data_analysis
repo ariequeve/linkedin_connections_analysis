@@ -1,0 +1,9 @@
+# Linkedin Data (Connections.csv) is integrated using a pandas instance to a data frame
+import pandas as pd
+dataFrame = pd.read_csv('Connections.csv')
+dataFrame.head()
+# Using Plotly for data visualization focusing on company/role
+import plotly.express as px
+chart = px.treemap(df, path=['Company', 'Position'], width=1200, height=1200)
+# Data visualization usint treemap
+chart.show()
